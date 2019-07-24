@@ -1,0 +1,2 @@
+class StadsController < ApplicationController
+end

@@ -1,0 +1,16 @@
+<%=form_for @day do |form|  %>
+
+
+      <div class="field">
+        <%= form.select :stad_id, Stad.all.collect { |p| [ p.size, p.id ] } %>
+      </div>
+      <div class="field">
+        <%= form.select :team_id, Team.all.collect { |p| [ p.name, p.id ] } %>
+      </div>
+      <div class="field">
+        <%= form.date_field :match_day %>
+      </div>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    <% end %>
